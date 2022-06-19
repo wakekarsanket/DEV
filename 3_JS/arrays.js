@@ -1,13 +1,13 @@
 //declaring an arr
 var cars = [];
 
-
-//declaring+initializing arr
+//declaring + initializing arr
 var cars = ["BMW", "AUDI", "HONDA", 1, 2, 4, true, undefined];
+
 //printing an array
 console.log(cars);
 
-//aceesing elements in an array 
+//accesing elements in an array
 console.log(cars[3]);
 console.log(cars[0]);
 
@@ -24,11 +24,16 @@ console.log(cars.length);
 console.log(cars);
 
 //Methods
+// pop -> removes end index element from array
 cars.pop();
 console.log(cars);
 console.log(cars.length);
 
+// push -> adds element at the end of array
 cars.push("Mustang");
+console.log(cars);
+var idx = cars.length - 1;
+console.log(cars[idx]);
 
 // unshift-> add element at the starting of arr
 cars.unshift("TATA");
@@ -36,9 +41,7 @@ console.log(cars);
 console.log(cars[0]);
 
 // shift-> it removes element from start of an arr
-
 cars.shift();
-// console.log(cars);
 console.log(cars);
 
 cars.length = 3;
