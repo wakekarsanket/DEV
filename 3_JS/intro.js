@@ -35,7 +35,7 @@ console.log(typeof a);
 //Strings in JS
 
 //1) single quotes
-var str = "Hello, to the batch FJP-9"; //same as double quotes
+var str = 'Hello, to the batch FJP-9'; //same as double quotes
 console.log(str);
 
 //2)double quotes
@@ -76,6 +76,7 @@ console.log(b);
 b = 200;
 console.log(b);
 
+//var can be accessed outside for loop
 var num = 10;
 for (var i = 0; i < num; i++) {
   if (i % 2 == 0) {
@@ -119,3 +120,6 @@ console.log(`value of i is ${i}`);
 const p = 10;
 //cannot be redeclared and reinitialized
 // scope-> same as let
+
+var res = 2 ** 3;
+console.log(res);
