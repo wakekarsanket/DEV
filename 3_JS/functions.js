@@ -62,8 +62,8 @@ function add(a, b) {
   return a + b;
 }
 
-let ans = add(2, 3);
-console.log(ans);
+let anss = add(2, 3);
+console.log(anss);
 
 let additionIIFE = (function (a, b) {
   // console.log(a + b);
@@ -71,3 +71,33 @@ let additionIIFE = (function (a, b) {
 })(20, 30);
 
 console.log(additionIIFE);
+
+//4) arrow functions
+function add(a, b) {      //normal function
+  return a + b;
+}
+var add = (a, b) => {     //arrow function
+  return a + b;
+};
+var add = (a, b) => a + b; //one line
+var ans = add(4, 7);
+console.log(ans);
+
+var square = (num) => num * num;
+var ans = square(7);
+console.log(ans);
+
+var sayHi = () => {
+  console.log("Hello everyone");
+};
+sayHi();
+
+var circumference = (radius) => {
+  let res = 2 * Math.PI * radius;
+  // return res;
+  console.log(res);
+};
+
+// var ans = circumference(8);
+// console.log(ans);
+circumference(8);
