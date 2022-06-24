@@ -50,7 +50,7 @@ console.log(captainAmerica.address["city"]);
 //for in loop -> gives key
 for(let key in captainAmerica){
     console.log(key);
-    console.log(captainAmerica["key"]);
+    console.log(captainAmerica[key]);
 }
 
 //deleting a key from an object
@@ -107,7 +107,7 @@ var specification = {
 
 console.log(specification);
 
-
+//in operator
 console.log("ram" in specification); //true
 if (specification["ram"]){
     console.log(true);
