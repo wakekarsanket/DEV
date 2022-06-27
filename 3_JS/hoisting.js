@@ -11,7 +11,7 @@ function fun() {
 console.log(greet);
 var greet = function () {
   console.log("hello");
-}
+};
 console.log(greet);
 console.log(a);
 
@@ -26,4 +26,97 @@ console.log(a);
 // console.log(a);
 
 //sir definition
-// accesing of variables and functions even before they are declared
+// accessing of variables and functions even before they are declared
+
+//temporal dead zone
+
+// console.log(a); //error
+// let a = 10;
+// console.log(b); //ud
+// var b = 100;
+// console.log(x); //error\
+
+//output questions
+//q1
+// {
+//   var a = 10;
+//   let b = 100;
+//   const c = 1000;
+
+//   console.log(a); //10
+//   console.log(b); //100
+//   console.log(c); //1000
+
+// }
+
+// console.log(a); //10
+// console.log(b); //error
+// console.log(c); //error
+
+//q2
+// function fun () {
+//   if (true) {
+//     let a = 10;
+//     var d = 20;
+//   }
+
+//   console.log(d); //20
+//   console.log(a); //error
+
+// }
+
+// fun();
+
+//q3
+
+// var a = 20;
+// {
+//   var a = 10;
+//   let b = 100;
+//   const c = 1000;
+
+//   console.log(a); //10
+//   console.log(b); //100
+//   console.log(c); //1000
+
+// }
+// var a = 20;
+
+// console.log(a); //10 then 20
+// console.log(b); //error
+// console.log(c); //error
+
+//q4
+// var a = 20;
+// function fun()
+// {
+//   var a = 10;
+//   let b = 100;
+//   const c = 1000;
+
+//   console.log(a); //10
+//   console.log(b); //100
+//   console.log(c); //1000
+
+// }
+
+// fun();
+// console.log(a); //10
+// console.log(b); //error
+// console.log(c); //error
+
+//q5
+var b = 45;
+{
+  var a = 10;
+  let b = 100;
+  const c = 1000;
+
+  console.log(a); //10
+  console.log(b); //100
+  console.log(c); //1000
+}
+
+console.log(a); //10
+console.log(b); //45
+console.log(c); //error
