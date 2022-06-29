@@ -1,14 +1,14 @@
-var obj = {};  //empty object
+var obj = {}; //empty object
 console.log(obj);
 
 var person = {
-    name : "Sanket",  //-> "name" : "Sanket"
-    age : 20,
-    phone : 9999999999,  //-> "phone" : 9999999999
-    isMale : true,
-    height : "170cm",
-    "school name": "Dnyanmata High School"
-}
+  name: "Sanket", //-> "name" : "Sanket"
+  age: 20,
+  phone: 9999999999, //-> "phone" : 9999999999
+  isMale: true,
+  height: "170cm",
+  "school name": "Dnyanmata High School",
+};
 console.log(person);
 
 //dot notation
@@ -21,21 +21,21 @@ console.log(person["school name"]);
 
 //nesting of objects
 var captainAmerica = {
-    firstName : "Steven",
-    lastName : "Rogers",
-    friends : ["Bucky", "Tony Stark", "Bruce Banner"],
-    age : 122,
-    isAvenger : true,
-    address : {
-        state : "Manhattan",
-        city : "New York",
-        country : "USA"
-    },
-    sayHi : function(){
-        console.log(`Hello my name is ${captainAmerica.firstName}`);
-        console.log(this);
-        console.log(`Hello my name is ${this.firstName}`);
-    }
+  firstName: "Steven",
+  lastName: "Rogers",
+  friends: ["Bucky", "Tony Stark", "Bruce Banner"],
+  age: 122,
+  isAvenger: true,
+  address: {
+    state: "Manhattan",
+    city: "New York",
+    country: "USA",
+  },
+  sayHi: function () {
+    console.log(`Hello my name is ${captainAmerica.firstName}`);
+    console.log(this);
+    console.log(`Hello my name is ${this.firstName}`);
+  },
 };
 
 console.log(captainAmerica.friends);
@@ -50,13 +50,13 @@ console.log(captainAmerica.address["city"]);
 
 //looping over objects
 //for in loop -> gives key
-for(let key in captainAmerica){
-    console.log(key);
-    console.log(captainAmerica[key]);
+for (let key in captainAmerica) {
+  console.log(key);
+  console.log(captainAmerica[key]);
 }
 
 //deleting a key from an object
-delete captainAmerica.age
+delete captainAmerica.age;
 console.log(captainAmerica);
 
 //adding a key in object
@@ -64,14 +64,14 @@ captainAmerica.height = "180cm";
 console.log(captainAmerica);
 
 var users = {
-    name : "John",
-    age : 30
-}
+  name: "John",
+  age: 30,
+};
 
 let abc = "age";
 console.log(users.name);
-console.log(users.abc);  //-> undefined
-console.log(users[abc]); 
+console.log(users.abc); //-> undefined
+console.log(users[abc]);
 
 // let fruit = prompt("Which fruit to buy?");
 //value substitute
@@ -84,13 +84,13 @@ console.log(users[abc]);
 let fruitName = "apple";
 //expression evaluate
 let items = {
-    [fruitName + "computers"]: 4
+  [fruitName + "computers"]: 4,
 };
 
 //property value shorthand
-var computerBrand= "apple";
+var computerBrand = "apple";
 var processor = "M2 sillicon";
-var ram = "16GB"
+var ram = "16GB";
 
 // var specification = {
 //     computerBrand: computerBrand, //-> computerBrand:"apple"
@@ -102,24 +102,51 @@ var ram = "16GB"
 var specification = {
   computerBrand,
   processor,
-    ram,
-    ssd: "512GB",
-  abc:undefined
+  ram,
+  ssd: "512GB",
+  abc: undefined,
 };
 
 console.log(specification);
 
 //in operator
 console.log("ram" in specification); //true
-if (specification["ram"]){
-    console.log(true);
-}; // 16GB
+if (specification["ram"]) {
+  console.log(true);
+} // 16GB
 
 console.log("abc" in specification);
 if (specification.abc) {
-    //do something
-    console.log(true);
+  //do something
+  console.log(true);
+} else {
+  console.log(false);
 }
-else {
-    console.log(false);
-}
+
+var obj = {
+  name: "John",
+  age: 32,
+};
+
+let clone = {};
+//jiske andar copy hona h , //jo copy hona h
+Object.assign(clone, obj, { isMale: true }, { favFood: "Pizza" });
+console.log(clone);
+obj.name = "Sanket";
+console.log(obj);
+console.log(clone);
+
+//nested object cloning
+
+let user = {
+  name: "Pete",
+  sizes: {
+    height: 182,
+    width: 50,
+  },
+};
+
+Object.assign(clone, user);
+user.sizes.height = 100;
+console.log(clone);
+console.log(user);
