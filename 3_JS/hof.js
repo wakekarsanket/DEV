@@ -1,4 +1,4 @@
-// Higher Order /function - a function in which we can pass another function as an argument, That function is know as hof 
+// Higher Order function - a function in which we can pass another function as an argument, That function is know as hof 
 
 var arr = [2, 5, 7, 12];
 

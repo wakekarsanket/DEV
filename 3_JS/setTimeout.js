@@ -53,7 +53,7 @@ console.log("before");
 setTimeout(function cb() {
   console.log("timer");
 }, 5000);
-//promise
+// promise
 fetch("https://api.netflix.com")
     .then(function cb() {
     console.log("yolo");
