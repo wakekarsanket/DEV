@@ -72,3 +72,22 @@ let car = {
     name: "Thar",
     brand:"Mahindra"
 }
+
+let carDescription = function (date, price){
+  console.log(`I bought a new ${this.brand} ${this.name}
+  on ${date} for INR ${price}`);
+};
+
+// var bindedFn = carDescription.bind(car, "22 July", "20 lacs");
+// bindedFn();
+
+Function.prototype.myBind = function (...args){
+  let fnObj = this;
+  let params = args.slice(1);
+  return function(){
+    fnObj.apply(args[0],params);
+  }
+}
+
+var myBindedFn = carDescription.myBind(car, "22 July", "20 lacs");
+myBindedFn();
